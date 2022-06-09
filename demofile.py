@@ -28,7 +28,7 @@ st.subheader('User Input parameters')
 st.write(df)
 
 iris = pd.read_csv('https://raw.githubusercontent.com/Saiful49/Projectjune2022/main/IRIS.csv')
-X= iris.data(['sepal_length','sepal_width','petal_length','petal_length'], axis = 1)
+X= iris.data(['sepal_length','sepal_width','petal_length','petal_width'], axis = 1)
 X= head()
 Y = iris.target('species')
 Y = head()
