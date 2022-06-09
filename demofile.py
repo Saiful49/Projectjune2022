@@ -27,8 +27,9 @@ st.subheader('User Input parameters')
 st.write(df)
 
 iris = datasets.load_iris(https://raw.githubusercontent.com/Saiful49/Projectjune2022/main/IRIS.csv)
-X = iris.data
-Y = iris.target
+X= iris.data(['sepal_length	','sepal_width','petal_length','petal_length'], axis = 1)
+X= head()
+Y = iris.target([species])
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
@@ -37,7 +38,7 @@ prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-st.write(iris.target)
+st.write(iris.target['setosa','versicolor','virginica'])
 
 st.subheader('Prediction')
 st.write(iris.target[prediction])
