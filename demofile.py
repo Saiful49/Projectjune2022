@@ -29,7 +29,7 @@ st.write(df)
 iris = pd.read_csv('https://raw.githubusercontent.com/Saiful49/Projectjune2022/main/IRIS.csv')
 X= iris.data(['sepal_length','sepal_width','petal_length','petal_length'], axis = 1)
 X= head()
-Y = iris.target(['species'])
+Y = iris.target('species')
 Y = head()
 
 clf = RandomForestClassifier()
@@ -39,10 +39,10 @@ prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-st.write(iris.target['setosa','versicolor','virginica'])
+st.write(iris.target_names['setosa','versicolor','virginica'])
 
 st.subheader('Prediction')
-st.write(iris.target[prediction])
+st.write(iris.target_names[prediction])
 #st.write(prediction)
 
 st.subheader('Prediction Probability')
